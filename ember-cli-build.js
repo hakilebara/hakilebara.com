@@ -1,10 +1,24 @@
 /*jshint node:true*/
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var narwinPack = require('narwin-pack');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
+    postcssOptions: {
+      compile: {
+        enabled: true,
+        plugins: [
+          {
+            module: narwinPack
+          }
+        ]
+      },
+      filter: {
+        enabled: false 
+      }
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
