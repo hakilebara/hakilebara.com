@@ -1,0 +1,13 @@
+.nav__links {
+  background-color: rgba(25,37,41,.985);
+}
+
+.nav__link {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+  flex: 1 0 auto;
+  text-decoration: none;
+  font-size: 1.5em;
+}

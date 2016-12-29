@@ -1,0 +1,21 @@
+<screen>
+  <page>
+    <header class="header--s">
+      <hbox justify="between">
+        <vbox fit justify="center">
+          {{link-to "Hakilebara" "index"}}
+        </vbox>
+        <box fit>
+        {{#link-to "menu"}}
+          <span class="nav__icon" data-ember-action="507">
+            <span class="nav__icon__top"></span>
+            <span class="nav__icon__middle"></span>
+            <span class="nav__icon__bottom"></span>
+          </span>
+        {{/link-to}}
+        </box>
+      </hbox>
+    </header>
+    {{outlet}}
+  </page>
+</screen>

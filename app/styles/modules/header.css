@@ -1,0 +1,25 @@
+.header--s {
+  background-color: #192529;
+  color: #FFF;
+}
+
+.nav__icon {
+  padding: 16px;
+  float: right;
+  cursor: pointer;
+}
+
+.nav__icon__bottom:not(:last-child), .nav__icon__middle:not(:last-child), .nav__icon__top:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.nav__icon__bottom, .nav__icon__middle, .nav__icon__top {
+    display: block;
+    height: 2px;
+    width: 18px;
+    background-color: #fff;
+    transition-property: all;
+    transition-duration: .25s;
+    transform: rotate(0);
+    will-change: transform;
+}
