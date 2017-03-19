@@ -1,0 +1,7 @@
+<article class="blog__post__item">
+  <h2 class="blog__post__item__title">
+    {{#link-to "blog.posts.show" post}} {{post.title}} {{/link-to}}
+  </h2>
+  <time class="blog__post__date">{{moment-format post.createdAt 'MMMM Do YYYY'}}</time>
+  <p class="blog__post__excerpt">{{post.summary}}</p>
+</article>

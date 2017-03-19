@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #CAD0D2;
+  background-color: #FFF;
+  margin: 0 .5em;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.card__visual {
+  padding-bottom: 100px;
+}
+.card__description {
+  padding: 5px 15px;
+}

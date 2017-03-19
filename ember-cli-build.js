@@ -1,7 +1,11 @@
 /*jshint node:true*/
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
-var narwinPack = require('narwin-pack');
+var autoprefixer = require('autoprefixer');
+var partialImport = require('postcss-partial-import');
+var nested = require('postcss-nested');
+var customMedia = require('postcss-custom-media');
+var customProperties = require('postcss-custom-properties');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
@@ -10,15 +14,23 @@ module.exports = function(defaults) {
       compile: {
         enabled: true,
         plugins: [
-          {
-            module: narwinPack
-          }
+          { module: partialImport },
+          { module: nested },
+          { module: customProperties },
+          { module: customMedia },
         ]
       },
       filter: {
-        enabled: false 
-      }
-    }
+        enabled: true,
+        plugins: [
+          { module: autoprefixer },
+        ]
+      },
+    },
+
+    nodeModulesToVendor: [
+      'node_modules/highlight.js'
+    ],
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -33,6 +45,8 @@ module.exports = function(defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+  app.import("bower_components/highlightjs/styles/agate.css");
+  //app.import('vendor/styles/github.css');
 
   return app.toTree();
 };

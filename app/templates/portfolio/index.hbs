@@ -1,0 +1,18 @@
+<section class="portfolio">
+  <div class="portfolio__head">
+    <!--<h1 class="about__title">about me</h1>-->
+    <h1 class="about__title"> Portfolio </h1>
+  </div>
+
+
+  <div class="portfolio__items">
+    {{#each model as |item|}}
+      <div class="portfolio__item">
+        <a href="{{href-to 'portfolio'}}/{{item.slug}}">
+          <img src="/{{item.image_url}}" class="portfolio__visual">
+          <div class="portfolio__description">{{item.name}}</div>
+        </a>
+      </div>
+    {{/each}}
+  </div>
+</section>

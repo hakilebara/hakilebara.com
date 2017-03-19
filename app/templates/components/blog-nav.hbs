@@ -1,0 +1,8 @@
+<nav class="blog__nav">
+  {{#link-to "blog.posts" class="blog__nav__link"}}
+    {{t 'blog.posts' }}<span class="blog__nav__count">({{postsCount}})</span>
+  {{/link-to}}
+  {{#link-to "blog.categories" class="blog__nav__link"}}
+    Categories <span class="blog__nav__count">({{categoriesCount}})</span>
+  {{/link-to}}
+</nav>

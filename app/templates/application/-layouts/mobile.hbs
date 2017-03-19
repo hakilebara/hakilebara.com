@@ -1,21 +1,41 @@
-<screen>
-  <page>
+<!--<screen>-->
+  <!--<page>-->
+<div class="app__set-locale" {{action "toggleLocale"}}><span>{{i18n.locale}}</span></div>
     <header class="header--s">
-      <hbox justify="between">
-        <vbox fit justify="center">
-          {{link-to "Hakilebara" "index"}}
-        </vbox>
-        <box fit>
-        {{#link-to "menu"}}
-          <span class="nav__icon" data-ember-action="507">
+      <nav class="m-nav">
+        <div class="m-navbar">
+          {{#link-to "index" class="m-nav__logo__link"}}
+            <span class="m-nav__logo">hakilebara</span>
+          {{/link-to}}
+          <span class="nav__icon" data-ember-action="507" {{action "toggleMobileNav"}}>
             <span class="nav__icon__top"></span>
             <span class="nav__icon__middle"></span>
             <span class="nav__icon__bottom"></span>
           </span>
-        {{/link-to}}
-        </box>
-      </hbox>
+        </div>
+        <div class="m-nav__links">
+          {{#link-to "index" class="m-nav__link" invokeAction='toggleMobileNav'}}
+            <span>Home</span>
+          {{/link-to}}
+          {{#link-to "about" class="m-nav__link" invokeAction='toggleMobileNav'}}
+            <span>About</span>
+          {{/link-to}}
+          {{#link-to "work" class="m-nav__link" invokeAction='toggleMobileNav'}}
+            <span>Work</span>
+          {{/link-to}}
+          {{#link-to "portfolio" class="m-nav__link" invokeAction='toggleMobileNav'}}
+            <span>Portfolio</span>
+          {{/link-to}}
+          {{#link-to "blog" class="m-nav__link" invokeAction='toggleMobileNav'}}
+            <span>Blog</span>
+          {{/link-to}}
+          {{#link-to "contact" class="m-nav__link" invokeAction='toggleMobileNav'}}
+            <span>Contact</span>
+          {{/link-to}}
+        </div>
+      </nav>
     </header>
     {{outlet}}
-  </page>
-</screen>
+    <div class="m-footer">FOOTER </div>
+  <!--</page>-->
+<!--</screen>-->

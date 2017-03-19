@@ -1,0 +1,17 @@
+<div class="blog__post__container">
+  <div class="blog__post__head">
+    <h1 class="blog__post__title">{{model.title}}</h1>
+    <time class="blog__post__date">{{moment-format model.createdAt 'MMMM Do YYYY'}}</time>
+  </div>
+  <div class="blog__post__body">
+    {{markdown-to-html markdown=model.body extensions='codehighlight' class="blog__post__content"}}
+  </div>
+
+    <!--<a class="blog__post__comment-button" href="/blog/2017/02/27/first-post#isso-thread" {{action "toggleCommentDisplay"}}>Comments</a>-->
+  <!--<div class="blog__comments {{displayCommentClass}}">-->
+    <!--<script data-isso="//localhost:8080/"-->
+      <!--src="//localhost:8080/js/embed.min.js"></script>-->
+
+    <!--<section id="isso-thread"></section>-->
+  <!--</div>-->
+</div>

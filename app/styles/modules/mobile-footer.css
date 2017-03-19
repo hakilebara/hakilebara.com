@@ -1,0 +1,11 @@
+.m-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  /*background: linear-gradient(44deg, rgb(40, 58, 80), #66a3ff);*/
+  background-color: #2E363B;
+  color: #FFF;
+  letter-spacing: 2px;
+}

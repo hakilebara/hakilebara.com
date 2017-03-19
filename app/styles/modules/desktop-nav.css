@@ -1,0 +1,126 @@
+:root {
+  /*--d-nav__active-link-color: #44d7ac;*/
+  --d-nav__active-link-color: #FFF;
+}
+.wrap {
+  height: 100vh;
+  display: flex;
+}
+
+.d-nav {
+  & {
+    flex-basis: 80px;
+    display: flex;
+    flex-direction: column;
+    background-color: #1c262b;
+  }
+}
+.d-nav__icon-home,
+.d-nav__icon-work,
+.d-nav__icon-portfolio,
+.d-nav__icon-blog,
+.d-nav__icon-contact,
+.d-nav__icon-about {
+  height: 32px;
+  width: 32px;
+  margin-bottom: .7em;
+  fill: rgba(255, 255, 255, 0.4);
+	/*fill: #FFF;*/
+}
+.d-nav__icon-behance,
+.d-nav__icon-twitter {
+  height: 15px;
+  width: 15px; fill: rgba(255, 255, 255, 0.4);
+}
+.d-nav__nav-link.active {
+  background-color: var(--d-nav__active-link-color);
+  color: #000;
+  .d-nav__icon-home,
+  .d-nav__icon-work,
+  .d-nav__icon-portfolio,
+  .d-nav__icon-blog,
+  .d-nav__icon-contact,
+  .d-nav__icon-about {
+    fill: black;
+  }
+}
+
+.d-nav__nav-link:hover .d-nav__nav-link-title {
+  transform: translate3d(0, 3px, 0);
+}
+.d-nav__nav-link-title {
+  & {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 100;
+    font-size: .56em;
+    transition: transform .1s;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+}
+
+.d-nav__portrait { width: 100%; }
+.d-nav__nav-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.d-nav__site-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: .8em;
+  padding: .8em .4em;
+  background-color: #000;
+  /*background-color: #2ba163;*/
+  /*font-family: sans-serif;*/
+  margin: 0;
+  color: #FFF;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+}
+
+.d-nav__nav-item {
+  display: flex;
+  height: 74px;
+  /*flex-basis: 13%;*/
+}
+.d-nav__nav-item:not(:last-child) {
+  border-bottom: 1px solid rgba(225, 246, 255, 0.07);
+}
+.d-nav__nav-item:last-child {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.d-nav__copyright {
+  font-size: .8em; 
+  font-family: sans-serif;
+  color: rgba(255, 255, 255, 0.4);
+}
+.d-nav__nav-link {
+  display: flex;
+  flex: 1;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+.d-nav__social-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1em;
+}
+.d-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: scroll;
+}
+

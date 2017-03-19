@@ -1,0 +1,17 @@
+<div class="blog__wrapper">
+  <ul>
+    {{#each tags as |tag|}}
+      <li>
+        {{#link-to "blog.categories.show" tag }}
+          <h2 class="blog__category__item">
+            <span>{{tag.name}}</span>
+            <hr>
+            <span>{{tag.postCount}}</span>
+          </h2>
+        {{/link-to}}
+      </li>
+      {{else}}
+        No category
+    {{/each}}
+  </ul>
+</div>

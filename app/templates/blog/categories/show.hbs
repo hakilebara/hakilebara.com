@@ -1,0 +1,17 @@
+<div class="blog__wrapper">
+  <header class="blog__category__head">
+    <h1>{{model.name}}</h1>
+    <i>{{model.postCount}} posts</i>
+  </header>
+  <ul>
+    {{#each posts as |post|}}
+      <li>
+        {{#link-to 'blog.posts.show' post}} 
+          {{blog-post post=post}} 
+        {{/link-to}}
+      </li>
+      {{else}}
+        <h5>No posts</h5>
+    {{/each}}
+  </ul>
+</div>

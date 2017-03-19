@@ -1,0 +1,70 @@
+.portfolio {
+  & {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: scroll;
+    background-color: #FFF;
+  }
+}
+.portfolio__head {
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+  color: #FFF;
+  background: linear-gradient(44deg, rgb(41, 255, 107), #66a3ff);
+  background-size: cover;
+  background-position-y: 35%;
+
+  h1 {
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5em;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+}
+.portfolio__items {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 3em;
+}
+.portfolio__item {
+  display: flex;
+  flex-direction: column;
+  /*border: 1px solid #CAD0D2;*/
+  padding: 0 20px;
+  margin-bottom: 40px;
+  width: 90%;
+}
+.portfolio__page {
+  flex: 1;
+  background-color: #FFF;
+  overflow-y: scroll;
+}
+.portfolio__page img {
+  padding-bottom: 4em;
+}
+.portfolio__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  max-width: 1040px;
+}
+@media screen and (min-width: 620px) {
+  .portfolio__item {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 990px) {
+  .portfolio__item {
+    width: 32%;
+  }
+}

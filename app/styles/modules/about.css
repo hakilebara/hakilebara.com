@@ -1,0 +1,65 @@
+.about {
+  & {
+  }
+}
+
+/************** ribbon ****************/
+.ribbon {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #8dc388;
+  font-style: normal;
+  min-width: 200px;
+  max-height: 38px;
+  color: #FFF;
+  font-size: .8em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  justify-content: center;
+  padding: 10px 15px;
+}
+.ribbon::before,
+.ribbon::after {
+  content: "";
+  position: absolute;
+  background-color: #75ad6f;
+  width: 25px;
+  height: 35px;
+  z-index: -1;
+  top: 10px;
+}
+.ribbon::before {
+  left: -17px;
+}
+.ribbon::after {
+  right: -17px;
+  z-index: -2;
+}
+.ribbon > span::before,
+.ribbon > span::after {
+  content: "";    
+  position: absolute;
+  border: solid 8px transparent;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}
+.ribbon > span::before {
+  bottom: -7px;
+  left: -8px;
+  border-right-color: #000;
+}
+.ribbon > span::after {
+  border-left-color: #000;
+  bottom: -7px;
+  right: -8px;
+}
+.ribbon__title {
+  position: relative;
+  z-index: 10;
+}
+
+/************** timeline ****************/
+

@@ -1,3 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
 @import "base.css";
-@import "modules/nav.css";
+@import "modules/mediaqueries.css";
+@import "modules/patterns.css";
+@import "modules/mobile-nav.css";
+@import "modules/mobile-footer.css";
+@import "modules/desktop-nav.css";
+@import "modules/home.css";
+@import "modules/page.css";
+@import "modules/portfolio.css";
+@import "modules/blog.css";
 @import "modules/header.css";
+
+
+/****** Liquid Fire *****/
+.liquid-container, .liquid-child {
+  display: flex;
+  flex: 1;
+}
+.icon {
+    background-image: url(sprite.svg#pencil);
+    fill: red;
+    stroke: black;
+}
+.app__set-locale {
+  & {
+    position: fixed;
+    display: flex;
+    top: 10%;
+    left: 80%;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    color: #FFF;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    background-color: rgba(0, 0, 0, 0.41);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+    @media(--desktop) {
+      opacity: .2;
+      top: 5%;
+      left: 90%;
+    }
+  }
+  &:hover {
+    opacity: 1;
+  }
+  span {
+    margin: auto;
+  }
+}

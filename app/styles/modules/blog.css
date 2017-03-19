@@ -1,0 +1,215 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100vh;
+  overflow-y: scroll;
+  background-color: #FFF;
+}
+.blog__nav {
+  padding-top: 1.5em;
+  padding-bottom: 1.75em;
+  text-align: left;
+  max-width: 620px;
+  margin: 0 auto;
+  width: 90%;
+}
+.blog__post__container {
+  display: flex;    
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+}
+.blog__post {
+  &__head {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    max-width: 620px;
+  }
+  &__title {
+    font-size: 2.25em; 
+    margin-bottom: 12px;
+    line-height: 1.2;
+    font-family: serif;
+    font-weight: 900;
+  }
+}
+.blog__post__body {
+  & {
+    flex: 1;
+    max-width: 620px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+  }
+  p {
+		font-size: 1.125em;
+    color: rgba(0,0,0,.8);
+    line-height: 28.44px;
+		line-height: 1.67;
+    text-align: left;
+    margin-bottom: .5em;
+    letter-spacing: -0.072px;
+    font-family: Cambria, "Times New Roman",Times,serif;
+    @media(--desktop) {
+      margin-bottom: 1em;
+		  font-size: 1.250em;
+    }
+  }
+	h1,h2,h3,h4{
+		font-size: 1.375em;
+		margin-bottom: 12px;
+		font-weight: 700;
+		line-height: 1.33;
+	}
+	pre {
+		margin-bottom: 1.875em;
+    font-family: monospace,sans-serif;
+	}
+
+}
+.blog__post__content >:not(pre) {
+  padding: 0 0.67em;
+}
+.blog__post__comment-button {
+  padding-button: 3em;
+}
+.blog__comments {
+  flex: 1;
+  width: 95%;
+  margin: 0 auto;
+  padding: 3em;
+}
+.hideCommentClass{
+  display: none;
+}
+#isso-thread {
+  margin: 0 auto !important;
+  width: 80%;
+  max-width: 620px;
+}
+
+/*  blog nav links  */
+.blog__nav__link { 
+  position: relative;
+  font-weight: 600;
+  padding-left: .75em;
+  margin-right: 1.875em;
+  color: #333;
+  transition: color .3s;
+  font-family: sans-serif;
+}
+.blog__nav__link.active { color: #2ba163; }
+.blog__nav__link:hover { color: #2ba163; }
+.blog__nav__link::before {
+  position: absolute;
+  left: 0;
+  bottom: 35%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #2ba163;
+}
+.blog__nav__link.active::before { content: ""; }
+.blog__nav__count { font-weight: 400; }
+
+
+/*  blog nav links  */
+.blog__wrapper {
+  flex: 1; 
+  width: 90%;
+  margin: 0 auto;
+  max-width: 620px;
+}
+
+.blog__post__item {
+  border-bottom: solid 1px lightgrey;
+  padding-bottom: 30px;
+  margin-bottom: 26px;
+  transform: color .5s;
+}
+.blog__post__item__title:hover { color: #2ba163; }
+.blog__post__item__title {
+  font-family: serif;
+  font-size: 1.8em;
+  color: #333;
+  margin: 0;
+  margin-bottom: .3em;
+  font-weight: 600;
+  transition: color .3s;
+}
+.blog__post__date {
+  display: block;
+  color: grey;
+  font-style: italic;
+  font-size: 1.125em;
+  margin-bottom: 0.625em;
+}
+.blog__post__excerpt { margin: 0; }
+
+/*********** categories ************/
+.blog__category__item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding-bottom: 1em;
+  transition: color .5s;
+  font-size: 1.5em;
+  /*line-height: 1.5;*/
+  font-family: sans-serif;
+  @media(--desktop) {
+    font-size: 2.25em;
+  }
+}
+.blog__category__item:hover {
+  color: #2ba163;
+}
+.blog__category__item hr {
+  flex: 1;
+  margin-left: 1em;
+  margin-right: 1em;
+  opacity: 0; 
+  border: 0;
+  border-top: 1px solid #2ba163;
+}
+.blog__category__item:hover hr {
+  opacity: 1; 
+}
+
+.blog__category__head {
+  & {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid lightgrey;
+    font-size: 1.125em;
+    @media(--desktop) {
+      font-size: 1.5em;
+    }
+  }
+  i {
+    font-style: italic;
+    color: darkgrey;
+  }
+}
+
+@media screen and (min-width: 620px) {
+  .blog__nav {
+    padding-top: 5.25em;
+    margin-bottom: 4.125em;
+  }
+  .blog__nav__link { font-size: 1.125em; }
+  .blog__post__content >:not(pre) { padding: 0; }
+}
+@media screen and (min-width: 1220px) {
+  .blog__post__container {
+    /*flex-direction: row;*/
+    width: 90%;
+  }
+  #isso-thread {
+    width: 80%;
+  }
+  
+}
