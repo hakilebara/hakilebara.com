@@ -27,7 +27,6 @@ module.exports = function(defaults) {
         ]
       },
     },
-
     nodeModulesToVendor: [
       'node_modules/highlight.js'
     ],
