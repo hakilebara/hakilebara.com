@@ -58,8 +58,6 @@
       font-size: 21px;
       letter-spacing: -0.003em;
       line-height: 1.58;
-    --x-height-multiplier: 0.35;
-    --baseline-multiplier: 0.179;
     }
   }
   ul {
