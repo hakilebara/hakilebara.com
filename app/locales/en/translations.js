@@ -57,8 +57,6 @@ export default {
     <ul>
        <li><p>This unashamedly over-engineered website was built with Ember.js and Node.js. It is a single page app server-rendered
        by <a target="_blank" href="https://ember-fastboot.com/">Ember Fastboot</a>.</p></li>
-       <li><p>The website is available in two languages, for internationalization (i18n) I use
-       <a target="_blank" href="https://github.com/jamesarosen/ember-i18n">jamesarosen/ember-i18n</a>.</p></li>
        <li><p>The responsive design is done using Flexi Layouts</p></li>
        <li><p>The CSS was written using PostCSS.</p></li>
        <li><p>Most of the icons were hand drawn using Sketch.</p></li>
